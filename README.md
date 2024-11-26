@@ -1,71 +1,85 @@
-# dds-512
+# DDS-512
 
-pip install pandas numpy faker kafka-python cassandra-driver
+A project demonstrating integration between Cassandra, Kafka, and Flask for managing IoT data streams from Apple devices.
 
-CREATE KEYSPACE iot_data WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+---
 
+## Requirements
 
-Databases Schema:
-CREATE TABLE apple_watch_iot.device_metadata (
-    device_id text PRIMARY KEY,
-    model text,
-    os_version text,
-    battery_level int,
-    last_sync_time timestamp
-);
-Partition Key: device_id ensures that each device's metadata is stored together.
+- **Python 3.10** (via [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html))
+- **Docker** and **Docker Compose**
 
-------------------------------X-----------------------------------------------------X-------------------------------
+---
 
-CREATE TABLE apple_watch_iot.health_metrics (
-    device_id text,
-    timestamp timestamp,
-    metric_type text,  -- e.g., 'heart_rate', 'calories_burned', 'sleep_quality'
-    value float,
-    unit text,         -- e.g., 'bpm', 'kcal', 'hours'
-    PRIMARY KEY ((device_id), metric_type, timestamp)
-) WITH CLUSTERING ORDER BY (metric_type ASC, timestamp DESC);
+## Installation and Setup
 
-Partition Key: device_id ensures that all data for a specific device is stored together.
-Clustering Columns: metric_type allows efficient querying of specific metrics, and timestamp ensures recent data is retrieved first.
+### Step 1: Clone the Repository
+```bash
+git clone <repository-url>
+cd <repository-folder>
+```
 
-------------------------------X-----------------------------------------------------X-------------------------------
+### Step 2: Create and Activate Conda Environment
+```bash
+conda create -n dds python=3.10
+conda activate dds
+```
 
-CREATE TABLE apple_watch_iot.activity_tracking (
-    device_id text,
-    timestamp timestamp,
-    activity_type text,  -- e.g., 'walking', 'running', 'cycling'
-    value float,         -- e.g., steps, distance in meters
-    unit text,           -- e.g., 'steps', 'meters', 'calories'
-    PRIMARY KEY ((device_id), activity_type, timestamp)
-) WITH CLUSTERING ORDER BY (activity_type ASC, timestamp DESC);
-Partition Key: device_id ensures all activities for a device are grouped.
-Clustering Columns: activity_type enables querying specific activities, and timestamp retrieves the most recent activities efficiently.
+### Step 3: Install Python Dependencies
+```bash
+pip install pandas numpy faker kafka-python cassandra-driver flask
+```
 
-------------------------------X-----------------------------------------------------X-------------------------------
+### Step 4: Start Docker Containers
+```bash
+docker-compose up -d
+```
 
-CREATE TABLE apple_watch_iot.environmental_data (
-    device_id text,
-    timestamp timestamp,
-    data_type text,      -- e.g., 'temperature', 'humidity', 'location'
-    value text,          -- Value depends on the data type (e.g., '25.3°C', '50%', 'latitude,longitude')
-    PRIMARY KEY ((device_id), data_type, timestamp)
-) WITH CLUSTERING ORDER BY (data_type ASC, timestamp DESC);
+This will start the Cassandra and Kafka services as defined in the `docker-compose.yml` file.
 
-Partition Key: device_id groups all environmental data for a device.
-Clustering Columns: data_type allows querying specific types of data (e.g., temperature, location), and timestamp ensures data is returned in chronological order.
+### Step 5: Run Cassandra and Kafka Setup Script
+```bash
+python cassandra_kafka_setup.py
+```
 
-------------------------------X-----------------------------------------------------X-------------------------------
-CREATE TABLE apple_watch_iot.notifications (
-    device_id text,
-    timestamp timestamp,
-    notification_type text,  -- e.g., 'message', 'reminder', 'alert'
-    content text,            -- Notification message
-    is_read boolean,
-    PRIMARY KEY ((device_id), notification_type, timestamp)
-) WITH CLUSTERING ORDER BY (notification_type ASC, timestamp DESC);
-Partition Key: device_id ensures all notifications for a device are grouped together.
-Clustering Columns: notification_type allows efficient retrieval by type, and timestamp retrieves recent notifications first.
+This script initializes the Cassandra database with necessary keyspaces and tables and sets up Kafka topics.
 
+### Step 6: Stream IoT Data to a Specific Table
+Use the `apple_stream.py` script to stream mock IoT data to a specified Cassandra table. For example:
+```bash
+python apple_stream.py --table health_metrics --num_records 20
+```
 
-Hello this is harsh
+- Replace `health_metrics` with the desired table name.
+- Adjust `--num_records` to control the number of records to stream.
+
+### Step 7: Start the Flask Application
+Run the Flask server to expose an API for interacting with the IoT data:
+```bash
+flask --app iot_apple run
+```
+
+The server will start on `http://127.0.0.1:5000`.
+
+---
+
+## Usage
+1. Ensure all services (Cassandra, Kafka, Flask) are running.
+2. Interact with the API via the Flask endpoints to retrieve or manage IoT data stored in Cassandra.
+
+---
+
+## Project Structure
+- **`docker-compose.yml`**: Defines the Docker environment for Cassandra and Kafka.
+- **`cassandra_kafka_setup.py`**: Sets up Cassandra tables and Kafka topics.
+- **`apple_stream.py`**: Simulates IoT data streams into Cassandra via Kafka.
+- **`iot_apple`**: Flask application exposing APIs for the IoT data.
+
+---
+
+## Troubleshooting
+- **Docker Issues**: Ensure Docker is running and the ports (`9042`, `9092`) are not blocked by other processes.
+- **Cassandra Errors**: Check the initialization script and verify the Cassandra container logs for errors.
+- **Kafka Errors**: Verify Kafka topics are correctly configured and Zookeeper is running.
+
+---
