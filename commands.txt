@@ -1,0 +1,108 @@
+CREATE KEYSPACE iot_data WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+CREATE TABLE iot_data.sensor_readings (
+    sensor_id text,
+    timestamp timestamp,
+    sensor_type text,
+    sensor_reading float,
+    unit text,
+    PRIMARY KEY ((sensor_id, sensor_type), timestamp)
+);	
+
+python apple_stream.py --table device_metadata --num_records 10 --kafka_topic apple_watch_iot
+python apple_stream.py --table health_metrics --num_records 20 
+
+kafka-topics --create --topic apple-watch-iot --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3
+
+
+Here are the **Cassandra commands** to create the tables for the Apple Watch IoT schema:
+
+CREATE KEYSPACE apple_watch_iot 
+WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+---
+
+### 2. **Table: Device Metadata**
+
+CREATE TABLE apple_watch_iot.device_metadata (
+    device_id text PRIMARY KEY,
+    model text,
+    os_version text,
+    battery_level int,
+    last_sync_time timestamp
+);
+
+### 3. **Table: Health Metrics**
+CREATE TABLE apple_watch_iot.health_metrics (
+    device_id text,
+    timestamp timestamp,
+    metric_type text,  -- e.g., 'heart_rate', 'calories_burned', 'sleep_quality'
+    value float,
+    unit text,         -- e.g., 'bpm', 'kcal', 'hours'
+    PRIMARY KEY ((device_id), metric_type, timestamp)
+) WITH CLUSTERING ORDER BY (metric_type ASC, timestamp DESC);
+
+### 4. **Table: Activity Tracking**
+CREATE TABLE apple_watch_iot.activity_tracking (
+    device_id text,
+    timestamp timestamp,
+    activity_type text,  -- e.g., 'walking', 'running', 'cycling'
+    value float,         -- e.g., steps, distance in meters
+    unit text,           -- e.g., 'steps', 'meters', 'calories'
+    PRIMARY KEY ((device_id), activity_type, timestamp)
+) WITH CLUSTERING ORDER BY (activity_type ASC, timestamp DESC);
+
+### 5. **Table: Environmental Data**
+
+CREATE TABLE apple_watch_iot.environmental_data (
+    device_id text,
+    timestamp timestamp,
+    data_type text,      -- e.g., 'temperature', 'humidity', 'location'
+    value text,          -- Value depends on the data type (e.g., '25.3°C', '50%', 'latitude,longitude')
+    PRIMARY KEY ((device_id), data_type, timestamp)
+) WITH CLUSTERING ORDER BY (data_type ASC, timestamp DESC);
+
+---
+
+### 6. **Table: Notifications**
+
+CREATE TABLE apple_watch_iot.notifications (
+    device_id text,
+    timestamp timestamp,
+    notification_type text,  -- e.g., 'message', 'reminder', 'alert'
+    content text,            -- Notification message
+    is_read boolean,
+    PRIMARY KEY ((device_id), notification_type, timestamp)
+) WITH CLUSTERING ORDER BY (notification_type ASC, timestamp DESC);
+
+---
+
+### 7. **Table: Device Status Logs**
+
+CREATE TABLE apple_watch_iot.device_status_logs (
+    device_id text,
+    timestamp timestamp,
+    status_code text,       -- e.g., 'active', 'inactive', 'error'
+    description text,       -- Detailed status description
+    battery_health text,    -- e.g., 'Good', 'Needs Service'
+    PRIMARY KEY ((device_id), timestamp)
+) WITH CLUSTERING ORDER BY (timestamp DESC);
+
+---
+
+### Summary of Commands
+1. **Keyspace Creation**: 
+   - `CREATE KEYSPACE apple_watch_iot`
+
+2. **Tables**:
+   - `device_metadata`
+   - `health_metrics`
+   - `activity_tracking`
+   - `environmental_data`
+   - `notifications`
+   - `device_status_logs`
+   - `gps_location_data`
+
+Copy and run each of these commands in the **Cassandra Query Language Shell (cqlsh)** to set up the schema.
+
+Let me know if you need further assistance!
