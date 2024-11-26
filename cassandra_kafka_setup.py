@@ -2,7 +2,7 @@ from cassandra.cluster import Cluster
 from kafka.admin import KafkaAdminClient, NewTopic
 
 BOOTSTRAP_SERVERS = "localhost:9092"
-TOPIC_NAME = "apple-watch-iot"
+TOPIC_NAME = "apple-watch-iot-2"
 NUM_PARTITIONS = 3
 REPLICATION_FACTOR = 1
 
