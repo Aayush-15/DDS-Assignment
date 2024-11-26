@@ -68,4 +68,4 @@ Partition Key: device_id ensures all notifications for a device are grouped toge
 Clustering Columns: notification_type allows efficient retrieval by type, and timestamp retrieves recent notifications first.
 
 
-
+Hello this is harsh
