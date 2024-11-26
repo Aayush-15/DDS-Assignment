@@ -1,4 +1,0 @@
-Metric,Value
-Query Response Time (seconds),0.0029990673065185547
-Throughput (queries/second),1226.1178671655753
-Kafka-Cassandra Latency (seconds),3.318660259246826

@@ -1,6 +1,7 @@
 postman*
 *.gz
-/apple-watch-iot/node_modules
+/apple-watch-iot/node_modules/old
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
