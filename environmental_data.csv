@@ -1,101 +1,101 @@
 device_id,timestamp,data_type,value,town,state
-device_001,2024-11-26T23:18:00,location,"37.774900, -122.419400",San Francisco,California
-device_001,2024-11-26T19:16:00,location,"37.774900, -122.419400",San Francisco,California
-device_001,2024-11-26T19:16:00,location,"37.774900, -122.419400",San Francisco,California
-device_001,2024-11-26T19:16:00,location,"37.774900, -122.419400",San Francisco,California
-device_001,2024-11-26T19:16:00,location,"37.774900, -122.419400",San Francisco,California
-device_002,2024-11-26T12:53:00,location,"32.715700, -117.161100",San Diego,California
-device_002,2024-11-26T13:29:00,location,"32.715700, -117.161100",San Diego,California
-device_002,2024-11-26T13:29:00,location,"32.715700, -117.161100",San Diego,California
-device_002,2024-11-26T13:29:00,location,"32.715700, -117.161100",San Diego,California
-device_002,2024-11-26T13:29:00,location,"32.715700, -117.161100",San Diego,California
-device_003,2024-11-26T23:35:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_003,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_003,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_003,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_003,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_004,2024-11-26T17:57:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_004,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_004,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_004,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_004,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_005,2024-11-26T17:57:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_005,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_005,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_005,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_005,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_006,2024-11-26T17:57:00,location,"30.267200, -97.743100",Austin,Texas
-device_006,2024-11-26T09:53:00,location,"30.267200, -97.743100",Austin,Texas
-device_006,2024-11-26T09:53:00,location,"30.267200, -97.743100",Austin,Texas
-device_006,2024-11-26T09:53:00,location,"30.267200, -97.743100",Austin,Texas
-device_006,2024-11-26T09:53:00,location,"30.267200, -97.743100",Austin,Texas
-device_007,2024-11-26T04:12:00,location,"34.052200, -118.243700",Los Angeles,California
-device_007,2024-11-26T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
-device_007,2024-11-26T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
-device_007,2024-11-26T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
-device_007,2024-11-26T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
-device_008,2024-11-26T02:28:00,location,"33.494200, -111.926100",Scottsdale,Arizona
-device_008,2024-11-26T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
-device_008,2024-11-26T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
-device_008,2024-11-26T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
-device_008,2024-11-26T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
-device_009,2024-11-26T06:48:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_009,2024-11-26T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_009,2024-11-26T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_009,2024-11-26T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_009,2024-11-26T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_010,2024-11-26T09:15:00,location,"29.760400, -95.369800",Houston,Texas
-device_010,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_010,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_010,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_010,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_011,2024-11-26T17:47:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_011,2024-11-26T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_011,2024-11-26T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_011,2024-11-26T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_011,2024-11-26T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
-device_012,2024-11-26T09:15:00,location,"29.760400, -95.369800",Houston,Texas
-device_012,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_012,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_012,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_012,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_013,2024-11-26T17:47:00,location,"43.156600, -77.608800",Rochester,New York
-device_013,2024-11-26T08:54:00,location,"43.156600, -77.608800",Rochester,New York
-device_013,2024-11-26T08:54:00,location,"43.156600, -77.608800",Rochester,New York
-device_013,2024-11-26T08:54:00,location,"43.156600, -77.608800",Rochester,New York
-device_013,2024-11-26T08:54:00,location,"43.156600, -77.608800",Rochester,New York
-device_014,2024-11-26T22:31:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_014,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_014,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_014,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_014,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_015,2024-11-26T17:57:00,location,"29.760400, -95.369800",Houston,Texas
-device_015,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_015,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_015,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_015,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_016,2024-11-26T17:47:00,location,"29.760400, -95.369800",Houston,Texas
-device_016,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_016,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_016,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_016,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_017,2024-11-26T17:47:00,location,"40.712800, -74.006000",New York City,New York
-device_017,2024-11-26T20:00:00,location,"40.712800, -74.006000",New York City,New York
-device_017,2024-11-26T20:00:00,location,"40.712800, -74.006000",New York City,New York
-device_017,2024-11-26T20:00:00,location,"40.712800, -74.006000",New York City,New York
-device_017,2024-11-26T20:00:00,location,"40.712800, -74.006000",New York City,New York
-device_018,2024-11-26T05:12:00,location,"32.715700, -117.161100",San Diego,California
-device_018,2024-11-26T13:29:00,location,"32.715700, -117.161100",San Diego,California
-device_018,2024-11-26T13:29:00,location,"32.715700, -117.161100",San Diego,California
-device_018,2024-11-26T13:29:00,location,"32.715700, -117.161100",San Diego,California
-device_018,2024-11-26T13:29:00,location,"32.715700, -117.161100",San Diego,California
-device_019,2024-11-26T23:35:00,location,"29.760400, -95.369800",Houston,Texas
-device_019,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_019,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_019,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_019,2024-11-26T10:23:00,location,"29.760400, -95.369800",Houston,Texas
-device_020,2024-11-26T17:47:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_020,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_020,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_020,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
-device_020,2024-11-26T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
+device_001,2024-11-27T15:10:00,location,"42.886400, -78.878400",Buffalo,New York
+device_001,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_001,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_001,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_001,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_002,2024-11-27T12:01:00,location,"43.156600, -77.608800",Rochester,New York
+device_002,2024-11-27T08:54:00,location,"43.156600, -77.608800",Rochester,New York
+device_002,2024-11-27T08:54:00,location,"43.156600, -77.608800",Rochester,New York
+device_002,2024-11-27T08:54:00,location,"43.156600, -77.608800",Rochester,New York
+device_002,2024-11-27T08:54:00,location,"43.156600, -77.608800",Rochester,New York
+device_003,2024-11-27T22:31:00,location,"40.712800, -74.006000",New York City,New York
+device_003,2024-11-27T20:00:00,location,"40.712800, -74.006000",New York City,New York
+device_003,2024-11-27T20:00:00,location,"40.712800, -74.006000",New York City,New York
+device_003,2024-11-27T20:00:00,location,"40.712800, -74.006000",New York City,New York
+device_003,2024-11-27T20:00:00,location,"40.712800, -74.006000",New York City,New York
+device_004,2024-11-27T05:12:00,location,"34.052200, -118.243700",Los Angeles,California
+device_004,2024-11-27T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
+device_004,2024-11-27T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
+device_004,2024-11-27T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
+device_004,2024-11-27T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
+device_005,2024-11-27T02:28:00,location,"32.715700, -117.161100",San Diego,California
+device_005,2024-11-27T13:29:00,location,"32.715700, -117.161100",San Diego,California
+device_005,2024-11-27T13:29:00,location,"32.715700, -117.161100",San Diego,California
+device_005,2024-11-27T13:29:00,location,"32.715700, -117.161100",San Diego,California
+device_005,2024-11-27T13:29:00,location,"32.715700, -117.161100",San Diego,California
+device_006,2024-11-27T23:35:00,location,"37.774900, -122.419400",San Francisco,California
+device_006,2024-11-27T19:16:00,location,"37.774900, -122.419400",San Francisco,California
+device_006,2024-11-27T19:16:00,location,"37.774900, -122.419400",San Francisco,California
+device_006,2024-11-27T19:16:00,location,"37.774900, -122.419400",San Francisco,California
+device_006,2024-11-27T19:16:00,location,"37.774900, -122.419400",San Francisco,California
+device_007,2024-11-27T12:53:00,location,"29.760400, -95.369800",Houston,Texas
+device_007,2024-11-27T10:23:00,location,"29.760400, -95.369800",Houston,Texas
+device_007,2024-11-27T10:23:00,location,"29.760400, -95.369800",Houston,Texas
+device_007,2024-11-27T10:23:00,location,"29.760400, -95.369800",Houston,Texas
+device_007,2024-11-27T10:23:00,location,"29.760400, -95.369800",Houston,Texas
+device_008,2024-11-27T17:47:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_008,2024-11-27T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_008,2024-11-27T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_008,2024-11-27T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_008,2024-11-27T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_009,2024-11-27T06:48:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_009,2024-11-27T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_009,2024-11-27T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_009,2024-11-27T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_009,2024-11-27T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_010,2024-11-27T09:15:00,location,"42.886400, -78.878400",Buffalo,New York
+device_010,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_010,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_010,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_010,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_011,2024-11-27T12:01:00,location,"40.712800, -74.006000",New York City,New York
+device_011,2024-11-27T20:00:00,location,"40.712800, -74.006000",New York City,New York
+device_011,2024-11-27T20:00:00,location,"40.712800, -74.006000",New York City,New York
+device_011,2024-11-27T20:00:00,location,"40.712800, -74.006000",New York City,New York
+device_011,2024-11-27T20:00:00,location,"40.712800, -74.006000",New York City,New York
+device_012,2024-11-27T05:12:00,location,"32.776700, -96.797000",Dallas,Texas
+device_012,2024-11-27T21:25:00,location,"32.776700, -96.797000",Dallas,Texas
+device_012,2024-11-27T21:25:00,location,"32.776700, -96.797000",Dallas,Texas
+device_012,2024-11-27T21:25:00,location,"32.776700, -96.797000",Dallas,Texas
+device_012,2024-11-27T21:25:00,location,"32.776700, -96.797000",Dallas,Texas
+device_013,2024-11-27T21:05:00,location,"42.886400, -78.878400",Buffalo,New York
+device_013,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_013,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_013,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_013,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_014,2024-11-27T12:01:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_014,2024-11-27T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_014,2024-11-27T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_014,2024-11-27T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_014,2024-11-27T04:37:00,location,"33.448400, -112.074000",Phoenix,Arizona
+device_015,2024-11-27T09:15:00,location,"43.156600, -77.608800",Rochester,New York
+device_015,2024-11-27T08:54:00,location,"43.156600, -77.608800",Rochester,New York
+device_015,2024-11-27T08:54:00,location,"43.156600, -77.608800",Rochester,New York
+device_015,2024-11-27T08:54:00,location,"43.156600, -77.608800",Rochester,New York
+device_015,2024-11-27T08:54:00,location,"43.156600, -77.608800",Rochester,New York
+device_016,2024-11-27T22:31:00,location,"34.052200, -118.243700",Los Angeles,California
+device_016,2024-11-27T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
+device_016,2024-11-27T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
+device_016,2024-11-27T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
+device_016,2024-11-27T20:16:00,location,"34.052200, -118.243700",Los Angeles,California
+device_017,2024-11-27T02:28:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_017,2024-11-27T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_017,2024-11-27T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_017,2024-11-27T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_017,2024-11-27T04:26:00,location,"33.494200, -111.926100",Scottsdale,Arizona
+device_018,2024-11-27T06:48:00,location,"33.425500, -111.940000",Tempe,Arizona
+device_018,2024-11-27T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
+device_018,2024-11-27T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
+device_018,2024-11-27T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
+device_018,2024-11-27T10:51:00,location,"33.425500, -111.940000",Tempe,Arizona
+device_019,2024-11-27T17:57:00,location,"42.886400, -78.878400",Buffalo,New York
+device_019,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_019,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_019,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_019,2024-11-27T02:51:00,location,"42.886400, -78.878400",Buffalo,New York
+device_020,2024-11-27T12:01:00,location,"29.760400, -95.369800",Houston,Texas
+device_020,2024-11-27T10:23:00,location,"29.760400, -95.369800",Houston,Texas
+device_020,2024-11-27T10:23:00,location,"29.760400, -95.369800",Houston,Texas
+device_020,2024-11-27T10:23:00,location,"29.760400, -95.369800",Houston,Texas
+device_020,2024-11-27T10:23:00,location,"29.760400, -95.369800",Houston,Texas
