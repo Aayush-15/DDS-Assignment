@@ -200,6 +200,35 @@ def write_to_csv(data_list, table_name):
     df.to_csv(filename, index=False)
     print(f"Data for table '{table_name}' written to CSV file: {filename}")
 
+
+def generate_and_insert_activity_data(session):
+    """
+    Generate and insert activity data into the activity_tracking table for devices 1 to 20.
+    """
+    for device_id in device_ids:
+        for _ in range(5):  # Generate 5 activity records per device
+            # Randomly select an activity
+            activity = random.choice(list(ACTIVITY_DATA.keys()))
+            activity_data = ACTIVITY_DATA[activity]
+
+            # Generate random values
+            duration = random.randint(10, 60)  # Duration in minutes
+            value = duration * activity_data["calories_per_min"]  # Calories burned
+            unit = "calories"
+
+            # Generate timestamp
+            current_time = datetime.now() - timedelta(
+                minutes=random.randint(0, 1440)  # Within the last 24 hours
+            )
+
+            # Insert into the activity_tracking table
+            query = """
+                INSERT INTO activity_tracking (device_id, timestamp, activity_type, value, unit)
+                VALUES (%s, %s, %s, %s, %s);
+            """
+            session.execute(query, (device_id, current_time, activity, value, unit))
+            print(f"Inserted activity data for {device_id}: {activity}, {value} {unit}, {current_time}")
+
 # Main function
 if __name__ == "__main__":
     producer = setup_kafka_producer()
@@ -207,6 +236,8 @@ if __name__ == "__main__":
 
     health_metrics_data = []
     location_data = []
+    for device_id in DEVICE_LOCATIONS.keys():
+        generate_and_insert_activity_data(session)
 
     for device_id in DEVICE_LOCATIONS.keys():
         device_data = generate_data_for_device(device_id)
