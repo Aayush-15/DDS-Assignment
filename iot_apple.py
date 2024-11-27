@@ -52,7 +52,7 @@ def query_table(table_name, query_params, fields="*"):
 # New Endpoint: Get list of states
 @app.route('/states', methods=['GET'])
 def get_states():
-    query = "SELECT DISTINCT state FROM environmental_data;"
+    query = "SELECT * FROM environmental_data;"
     rows = session.execute(query)
     states = sorted({row.state for row in rows if row.state})
     return jsonify(states), 200

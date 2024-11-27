@@ -6,10 +6,9 @@ import json
 import pandas as pd
 from cassandra.cluster import Cluster
 from kafka import KafkaProducer
-
+from cassandra_kafka_setup import TOPIC_NAME
 # Constants for Kafka
 BOOTSTRAP_SERVERS = "localhost:9092"
-TOPIC_NAME = "apple-watch-iot-2"
 
 fake = Faker()
 

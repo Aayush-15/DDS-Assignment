@@ -7,7 +7,7 @@ import glob
 CASSANDRA_HOST = "127.0.0.1"
 KEYSPACE = "apple_watch_iot"
 BOOTSTRAP_SERVERS = "localhost:9092"
-TOPIC_NAME = "apple-watch-iot-2"
+TOPIC_NAME = "apple-watch-iot-5"
 
 def purge_cassandra_data():
     try:
