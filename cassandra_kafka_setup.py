@@ -2,10 +2,9 @@ from cassandra.cluster import Cluster
 from kafka.admin import KafkaAdminClient, NewTopic
 
 BOOTSTRAP_SERVERS = "localhost:9092"
-TOPIC_NAME = "apple-watch-iot"
+TOPIC_NAME = "apple-watch-iot-2"
 NUM_PARTITIONS = 3
 REPLICATION_FACTOR = 1
-
 
 def create_keyspace_and_tables():
     # Connect to Cassandra
@@ -41,9 +40,9 @@ def create_keyspace_and_tables():
     CREATE TABLE IF NOT EXISTS health_metrics (
         device_id text,
         timestamp timestamp,
-        metric_type text,  -- e.g., 'heart_rate', 'calories_burned', 'sleep_quality'
+        metric_type text,  -- e.g., 'heart_rate', 'calories_burned', 'stress_level'
         value float,
-        unit text,         -- e.g., 'bpm', 'kcal', 'hours'
+        unit text,         -- e.g., 'bpm', 'kcal', 'level'
         PRIMARY KEY ((device_id), metric_type, timestamp)
     ) WITH CLUSTERING ORDER BY (metric_type ASC, timestamp DESC);
     """
@@ -68,7 +67,9 @@ def create_keyspace_and_tables():
         device_id text,
         timestamp timestamp,
         data_type text,      -- e.g., 'temperature', 'humidity', 'location'
-        value text,          -- Value depends on the data type (e.g., '25.3°C', '50%', 'latitude,longitude')
+        value text,          -- Value depends on the data type (e.g., '25.3°C', '50%', 'latitude,longitude (location_name)')
+        town text,
+        state text,
         PRIMARY KEY ((device_id), data_type, timestamp)
     ) WITH CLUSTERING ORDER BY (data_type ASC, timestamp DESC);
     """
@@ -102,7 +103,6 @@ def create_keyspace_and_tables():
 
     print("Keyspace and tables created successfully.")
 
-
 def create_kafka_topic(
     bootstrap_servers, topic_name, num_partitions, replication_factor
 ):
@@ -128,7 +128,6 @@ def create_kafka_topic(
 
     finally:
         admin_client.close()
-
 
 if __name__ == "__main__":
     create_keyspace_and_tables()
