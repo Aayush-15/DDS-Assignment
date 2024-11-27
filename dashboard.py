@@ -667,6 +667,11 @@ def update_activity_distribution_graph(n):
         # Fetch activity tracking data
         response = requests.get("http://127.0.0.1:5000/activity_tracking")
         data = response.json()
+        
+        if len(data) == 0:
+            return
+        
+        
         df = pd.DataFrame(data)
 
         # Count activities
