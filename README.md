@@ -47,7 +47,7 @@ This script initializes the Cassandra database with necessary keyspaces and tabl
 ### Step 6: Stream IoT Data to a Specific Table
 Use the `data-stream-id.py` script to stream mock IoT data to Cassandra tables. For example:
 ```bash
-python data-stream-id.py --table
+python data-stream-id.py
 ```
 
 ### Step 7: Start the Flask Application
