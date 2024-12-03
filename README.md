@@ -3,7 +3,7 @@
 A project demonstrating integration between Cassandra, Kafka, and Flask for managing IoT data streams from Apple devices.
 
 ---
-## System-Diagram IOT-System-Diagram.jpeg
+## System-Diagram
 ![IOT-Device-Data-System-Diagram](IOT-System-Diagram.jpeg)
 
 ## Requirements
