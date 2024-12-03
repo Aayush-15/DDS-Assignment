@@ -39,18 +39,19 @@ app.layout = html.Div(
 
         # Device ID Input
         html.Div(
-            [
-                html.Label("Enter Device ID:"),
-                dcc.Input(
-                    id="device-id-input",
-                    type="text",
-                    placeholder="Enter a device ID...",
-                    style={"width": "50%", "padding": "10px"},
-                ),
-                html.Button("Submit", id="submit-button", n_clicks=0),
-            ],
-            style={"textAlign": "center", "marginBottom": "20px"},
-        ),
+        [
+            html.Label("Enter Device ID:", style={"display": "block", "marginBottom": "10px"}),
+            dcc.Input(
+                id="device-id-input",
+                type="text",
+                placeholder="Enter a device ID...",
+                style={"width": "50%", "padding": "10px", "display": "block", "marginBottom": "10px"},
+            ),
+            html.Button("Submit", id="submit-button", n_clicks=0, style={"display": "block"}),
+        ],
+        style={"textAlign": "left", "marginBottom": "20px", "marginLeft": "20px"},
+    ),
+
 
         # Health Metrics Charts
         html.Div(
@@ -561,6 +562,9 @@ def update_correlation_graph(device_id):
         return {}
     try:
         # Fetch heart rate and stress level data
+        ff=f"http://127.0.0.1:5000/health_metrics?device_id={device_id}&metric_type=heart_rate"
+        print("DDS-------------")
+        print(ff)
         response_hr = requests.get(
             f"http://127.0.0.1:5000/health_metrics?device_id={device_id}&metric_type=heart_rate"
         )
@@ -573,6 +577,8 @@ def update_correlation_graph(device_id):
         # Merge data on timestamp
         df_hr = pd.DataFrame(data_hr)
         df_sl = pd.DataFrame(data_sl)
+        print(df_hr)
+        print(df_sl)
         df_hr["timestamp"] = pd.to_datetime(df_hr["timestamp"])
         df_sl["timestamp"] = pd.to_datetime(df_sl["timestamp"])
 
@@ -603,6 +609,7 @@ def update_correlation_graph(device_id):
         )
         return fig
     except Exception as e:
+        
         print(f"Error updating correlation graph: {e}")
         return {}
 
