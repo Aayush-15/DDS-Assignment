@@ -1,4 +1,4 @@
-# DDS-512
+# DDS-512- Real time IOT Data Streaming
 
 A project demonstrating integration between Cassandra, Kafka, and Flask for managing IoT data streams from Apple devices.
 
