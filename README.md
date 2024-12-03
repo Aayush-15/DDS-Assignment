@@ -6,6 +6,16 @@ A project demonstrating integration between Cassandra, Kafka, and Flask for mana
 ## System-Diagram
 ![IOT-Device-Data-System-Diagram](IOT-System-Diagram.jpeg)
 
+The architecture includes the following components:
+
+
+1.Data Source (IoT Device): The Apple Watch acts as the data source, generating real-time sensor and activity data.
+2.Kafka: Serves as the message broker for high-throughput, low-latency data streaming.
+3.Load Balancer: Ensures scalability and distributes API requests from clients.
+4.Cassandra: A highly scalable NoSQL database used for efficient storage and retrieval of IoT data.
+5.Clients: Applications consuming real-time data from the Cassandra database for analytics and visualization.
+
+
 ## Requirements
 
 - **Python 3.10** (via [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html))
