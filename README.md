@@ -45,13 +45,10 @@ python cassandra_kafka_setup.py
 This script initializes the Cassandra database with necessary keyspaces and tables and sets up Kafka topics.
 
 ### Step 6: Stream IoT Data to a Specific Table
-Use the `apple_stream.py` script to stream mock IoT data to a specified Cassandra table. For example:
+Use the `data-stream-id.py` script to stream mock IoT data to Cassandra tables. For example:
 ```bash
-python apple_stream.py --table health_metrics --num_records 20
+python data-stream-id.py --table
 ```
-
-- Replace `health_metrics` with the desired table name.
-- Adjust `--num_records` to control the number of records to stream.
 
 ### Step 7: Start the Flask Application
 Run the Flask server to expose an API for interacting with the IoT data:
